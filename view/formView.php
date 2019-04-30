@@ -5,7 +5,7 @@ require('libs/Smarty.class.php');
 /**
  *
  */
-class formView
+class FormView
 {
 
   private $Smarty;
@@ -18,9 +18,8 @@ class formView
 
   }
 
-  function Mostrar($Titulo){
-    
-    $this->Smarty->assign('Titulo',$Titulo);
+  function mostrar($titulo){
+    $this->Smarty->assign('titulo',$titulo);
     $this->Smarty->display('templates/form.tpl');
   }
 

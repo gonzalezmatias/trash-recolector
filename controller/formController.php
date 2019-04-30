@@ -1,20 +1,20 @@
 <?php
-require_once  "./view/formView.php";
-//require_once  "./model/FormMode.php";
-class formController
+require_once  "./view/FormView.php";
+//require_once  "./model/FormModel.php";
+class FormController
 {
    // private $model;
-    private $Titulo;
+    private $titulo;
     private $view;
     function __construct(){
-       // $model= new FormMode();
-        $Titulo = "Formulario Principal";
-        $view = new formView();
-
+       // $model= new FormModel();
+        $this->titulo = "Formulario Principal";
+        $this->view = new FormView();
     }
-    public function Home()
+
+    public function home()
     {
-        $this->view->Mostrar($this->Titulo);
+        $this->view->mostrar($this->titulo);
     }
 }
 
