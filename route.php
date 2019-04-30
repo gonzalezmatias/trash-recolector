@@ -2,9 +2,7 @@
 
 //esto ya esta agregado todo
 require_once "config/ConfigApp.php";
-require_once "controller\HomeController.php";
-require_once "controller\FormController.php";
-
+require_once "controller\formController.php";
 
 
 
