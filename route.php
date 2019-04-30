@@ -34,7 +34,7 @@ if(isset($_GET['action'])){
             echo $controller->$metodo();
         }
     }else{
-      $controller =  new HomeController();
+      $controller =  new FormController();
       echo $controller->Home();
     }
 }
