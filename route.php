@@ -2,7 +2,7 @@
 
 //esto ya esta agregado todo
 require_once "config/ConfigApp.php";
-require_once "controller\formController.php";
+require_once "controller/formController.php";
 
 
 
@@ -32,7 +32,7 @@ if(isset($_GET['action'])){
             echo $controller->$metodo();
         }
     }else{
-      $controller =  new FormController();
+      $controller =  new formController();
       echo $controller->Home();
     }
 }

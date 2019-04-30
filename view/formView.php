@@ -5,7 +5,7 @@ require('libs/Smarty.class.php');
 /**
  *
  */
-class CategoriasView
+class formView
 {
 
   private $Smarty;
@@ -24,4 +24,4 @@ class CategoriasView
     $this->Smarty->display('templates/form.tpl');
   }
 
-
+}
