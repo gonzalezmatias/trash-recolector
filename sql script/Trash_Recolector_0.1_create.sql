@@ -3,8 +3,8 @@
 
 -- tables
 -- Table: Reportes
-CREATE TABLE Reportes (
-    id_reporte int  NOT NULL,
+CREATE TABLE reportes (
+    id_reporte int  NOT NULL AUTO_INCREMENT,
     lugar_reporte varchar(75)  NOT NULL,
     detalle varchar(255)  NULL,
     fecha date  NOT NULL,
