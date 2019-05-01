@@ -17,20 +17,24 @@ class FormController
         $this->view->mostrar($this->titulo);
     }
 
+    public function agregarDenuncia(){
+     $latitud, $longitud;
+      $detalle=$_POST['details'];
+      $rutaTempimagen=$_FILES['imagenes']['name'];
+
+
+
+    }
+
     
 
-    function sonJPG($rutas){
-        foreach ($rutas as $ruta) {
+    function sonJPG($ruta){
+      
                     $tamaño = strlen($ruta)-3;
                     $ext = substr($ruta, $tamaño);
-                    if(($ext == "jpg") || ($ext == "png")){
-                      $valor=true;
-                    }
-        }
-        if($valor!=true){
-          $valor=false;
-        }
-        return $valor;
+           return     (($ext == "jpg") || ($ext == "png"))
+        
+        
       }
 }
 

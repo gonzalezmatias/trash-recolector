@@ -13,6 +13,7 @@ class ConfigApp
     public static $ACTIONS = [
 
       'hola'=>'formController#Home',
+      'agregarDenuncia'=>'formController#agregarDenuncia'
 
 
 

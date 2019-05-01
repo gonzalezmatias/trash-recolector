@@ -2,10 +2,10 @@
 <div class="reportForm">
   <div class="container">
     <h2>Denuncia</h2>
-    <form method="post" action="submit">
+    <form method="post" action="agregarDenuncia"  enctype="multipart/form-data">
          <div class="form-group">
             <label for="imagen">Foto del incidente</label></br>
-            <input type="file" id="imagenes" name="imagenes[]" multiple>
+            <input type="file" id="imagenes" name="imagenes[]">
         </div>
       <div class="form-group">
         <label for="#">Detalles de la denuncia (opcional)</label>
