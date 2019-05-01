@@ -13,4 +13,3 @@ CREATE TABLE reportes (
 );
 
 -- End of file.
-
