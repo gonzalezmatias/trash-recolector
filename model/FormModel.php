@@ -4,15 +4,22 @@ class FormModel{
 private $db;
 
   function __construct(){
-    //introducir nombre bbdd
-    $this->db = new PDO('mysql:host=localhost;dbname==utf8', 'root', '');
+    $this->db = new PDO('mysql:host=localhost;dbname=trash_recolector charset=utf8', 'root', '');
   }
 
-  function createAComplaint($lugarReporte,$detalle,$fecha,$idUsuario){
-    $insert= $this->$db->prepare("INSERT INTO Reportes(lugar_reporte,detalle,fecha,id_usuario)"."VALUES(:lugar_reporte, :detalle, :fecha, :id_usuario)");
-    $insert->execute(array(":lugar_reporte"=>$lugarReporte, ":detalle"=>$detalle, ":fecha"=>$fecha, ":id_usuario"=>$idUsuario));
+  //alta de denuncia
+  function createAComplaint($detalle,$latitud,$longitud,$imagen,$fecha,$id_usuario){
 
-  }
+    $path="images/".uniqid()."_".$imagen["name"];
+    move_uploaded_file($imagen["tmp_name"], $path);
+
+    $insert= $this->$db->prepare("INSERT INTO Reportes(detalle,latitud,longitud,imagen,fecha,id_usuario)
+    "."VALUES(:detalle, :latitud, :longitud, :imagen, :fecha, :id_usuario)");
+    $insert->execute(array(":detalle"=>$detalle, ":latitud"$latitud, ":longitud"=>$longitud,
+    ":imagen"=>$path, ":fecha"=>$fecha, ":id_usuario"=>$idUsuario));
+
+    }
+
 
 }
 
