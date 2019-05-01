@@ -3,18 +3,12 @@
   <div class="container">
     <h2>Denuncia</h2>
     <form method="post" action="submit">
-      <div class="form-group">
-        <label>Foto del incidente</label>
-        <div class="input-group">
-          <span class="input-group-btn">
-            <span class="btn btn-default btn-file">
-              Explorar… <input type="file" id="imgInp">
-            </span>
-          </span>
-          <input type="text" class="form-control" readonly>
-        </div>
-        <img id='img-upload'/>
-      </div>
+      
+         <div class="form-group">
+                <label for="imagen">Foto del incidente</label>
+                <input type="file" id="imagenes" name="imagenes[]" multiple>
+              </div>
+      
       <div class="form-group">
         <label for="#">Localizacion: </label></br>
         <input type="radio" name="localization" value="normal" checked> Escribir ubicacion </input>

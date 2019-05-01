@@ -16,6 +16,22 @@ class FormController
     {
         $this->view->mostrar($this->titulo);
     }
+
+    
+
+    function sonJPG($rutas){
+        foreach ($rutas as $ruta) {
+                    $tamaño = strlen($ruta)-3;
+                    $ext = substr($ruta, $tamaño);
+                    if(($ext == "jpg") || ($ext == "png")){
+                      $valor=true;
+                    }
+        }
+        if($valor!=true){
+          $valor=false;
+        }
+        return $valor;
+      }
 }
 
 ?>
