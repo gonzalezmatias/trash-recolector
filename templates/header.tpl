@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="css/style.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>{$titulo}</title>
+  <title>{$title}</title>
 </head>
 <body>
- 
+
 <header>
   <div class="container example4">
     <nav class="navbar navbar-default">
@@ -29,7 +29,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>   
+            <li><a href="#">Contact</a></li>
           </ul>
         </div>
         <!--/.nav-collapse -->
