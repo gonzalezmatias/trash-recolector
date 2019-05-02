@@ -1,8 +1,9 @@
 <?php
 
-//esto ya esta agregado todo
+//El route se encarga de redireccionar al controller correspondiente a lo que se quiera hacer (por ahora solo está)
+//implementada la redirección al form
 require_once "config/ConfigApp.php";
-require_once "controller/formController.php";
+require_once "controller/FormController.php";
 
 
 
@@ -30,7 +31,7 @@ if(isset($_GET['action'])){
             echo $controller->$metodo();
         }
     }else{
-      $controller =  new formController();
+      $controller =  new FormController();
       echo $controller->home();
     }
 }

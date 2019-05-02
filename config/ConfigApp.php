@@ -5,7 +5,6 @@ define('HOME', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["P
 //define('PROD', 'Location: http://'.$_SERVER["SERVER_NAME"]. ":". $_SERVER['SERVER_PORT'] . dirname($_SERVER["PHP_SELF"]).'/productos');
 
 
-
 class ConfigApp
 {
     public static $ACTION = 'action';
