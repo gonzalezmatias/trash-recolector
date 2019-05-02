@@ -22,7 +22,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img class="main-logo" src="images/trash.png" alt="trash recoloctor">
+          <a class="navbar-brand" href="home"><img class="main-logo" src="images/trash.png" alt="trash recoloctor">
           </a>
         </div>
         <div id="navbar4" class="navbar-collapse collapse">

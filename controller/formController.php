@@ -16,6 +16,10 @@ class FormController
   public function home(){ //llama a la vista y le pide que muestre el template del formulario
     $this->view->mostrar($this->titulo);
   }
+  public function denunciaExitosa(){
+    $this->view->denunciaExitosa("denuncia exitosa");
+  }
+ 
 
   public function agregarDenuncia(){ //Toma los datos del form y los envia al model para que los suba a la BD
     $latitud=$_POST['latitude'];
@@ -24,7 +28,7 @@ class FormController
     $rutaTempimagen=$_FILES['imagenes']['name'];
     $id_usuario=99999;
     $this->model->createAComplaint($detalle,$latitud,$longitud,$rutaTempimagen[0],$id_usuario);
-    $this->home();
+    $this->denunciaExitosa();
   }
 
 

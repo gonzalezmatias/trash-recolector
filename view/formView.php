@@ -20,5 +20,9 @@ class FormView
     $this->Smarty->assign('titulo',$titulo);
     $this->Smarty->display('templates/form.tpl');
   }
+  function denunciaExitosa($titulo){
+    $this->Smarty->assign('titulo',$titulo);
+    $this->Smarty->display('templates/denunciaExitosa.tpl');
+  }
 
 }
