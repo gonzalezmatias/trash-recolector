@@ -23,12 +23,12 @@ if(isset($_GET['action'])){
         $params = $urlData[ConfigApp::$PARAMS];
         $action = explode('#',ConfigApp::$ACTIONS[$action]);
         $controller =  new $action[0]();
-        $metodo = $action[1];
+        $metod = $action[1];
         if(isset($params) &&  $params != null){
-            echo $controller->$metodo($params);
+            echo $controller->$metod($params);
         }
         else{
-            echo $controller->$metodo();
+            echo $controller->$metod();
         }
     }else{
       $controller =  new FormController();

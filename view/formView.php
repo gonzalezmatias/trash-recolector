@@ -16,12 +16,12 @@ class FormView
 
   }
 
-  function mostrar($titulo){ //La activación de la función pone en pantalla el template solicitado
-    $this->Smarty->assign('titulo',$titulo);
+  function showForm($title){ //La activación de la función pone en pantalla el template solicitado
+    $this->Smarty->assign('title',$title);
     $this->Smarty->display('templates/form.tpl');
   }
-  function denunciaExitosa($titulo){
-    $this->Smarty->assign('titulo',$titulo);
+  function successfulComplaint($title){
+    $this->Smarty->assign('title',$title);
     $this->Smarty->display('templates/denunciaExitosa.tpl');
   }
 

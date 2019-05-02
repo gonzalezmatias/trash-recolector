@@ -11,9 +11,9 @@ class ConfigApp
     public static $PARAMS = 'params';
     public static $ACTIONS = [
 
-      'home'=>'formController#Home',
-      'agregarDenuncia'=>'formController#agregarDenuncia',
-      'verDenuncia'=>'formController#denunciaExitosa',
+      'home'=>'formController#home',
+      'agregarDenuncia'=>'FormController#addComplaint',
+      'verDenuncia'=>'FormController#successfulComplaint',
 
 
 

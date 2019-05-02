@@ -5,41 +5,36 @@ require_once  "./model/FormModel.php";
 class FormController
 {
   // private $model;
-  private $titulo;
+  private $title;
   private $view;
   function __construct(){
     $this->model= new FormModel();
-    $this->titulo = "Formulario Principal";
+    $this->title = "Formulario Principal";
     $this->view = new FormView();
   }
 
   public function home(){ //llama a la vista y le pide que muestre el template del formulario
-    $this->view->mostrar($this->titulo);
+    $this->view->showForm($this->title);
   }
-  public function denunciaExitosa(){
-    $this->view->denunciaExitosa("denuncia exitosa");
-  }
- 
-
-  public function agregarDenuncia(){ //Toma los datos del form y los envia al model para que los suba a la BD
-    $latitud=$_POST['latitude'];
-    $longitud=$_POST['longitude'];
-    $detalle=$_POST['details'];
-    $rutaTempimagen=$_FILES['imagenes']['name'];
-    $id_usuario=99999;
-    $this->model->createAComplaint($detalle,$latitud,$longitud,$rutaTempimagen[0],$id_usuario);
-    $this->denunciaExitosa();
+  public function successfulComplaint(){
+    $this->view->successfulComplaint("denuncia exitosa");
   }
 
 
+  public function addComplaint(){ //Toma los datos del form y los envia al model para que los suba a la BD
+    $latitude=$_POST['latitude'];
+    $longitude=$_POST['longitude'];
+    $details=$_POST['details'];
+    $imageRoute=$_FILES['imagenes']['name'];
+    $id_user=99999;
+    $this->model->createAComplaint($details,$latitude,$longitude,$imageRoute[0],$id_user);
+    $this->successfulComplaint();
+  }
 
-  function sonJPG($ruta){
-
-    $tamaño = strlen($ruta)-3;
-    $ext = substr($ruta, $tamaño);
-    return     (($ext == "jpg") || ($ext == "png"));
-
-
+  function isJPG($route){
+    $tamaño = strlen($route)-3;
+    $ext = substr($route, $size);
+    return (($ext == "jpg") || ($ext == "png"));
   }
 }
 

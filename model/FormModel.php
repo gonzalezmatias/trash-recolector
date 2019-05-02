@@ -8,22 +8,21 @@ private $db;
   }
 
   //alta de denuncia
-  function createAComplaint($detalle,$latitud,$longitud,$imagen,$id_usuario){
+  function createAComplaint($details,$latitude,$longitude,$image,$id_user){
 
-    $path=$this->subirImagen($imagen[0]);
+    $path=$this->uploadImage($image[0]);
 
     $insert= $this->db->prepare("INSERT INTO Reportes(detalle,latitud,longitud,imagen,id_usuario)
-    "."VALUES(:detalle, :latitud, :longitud, :imagen, :id_usuario)");
+    "."VALUES(:details, :latitude, :longitude, :image, :id_user)");
 
-    $insert->execute(array(":detalle"=>$detalle, ":latitud"=>$latitud, ":longitud"=>$longitud,
-    ":imagen"=>$path, ":id_usuario"=>$id_usuario));
-
+    $insert->execute(array(":details"=>$details, ":latitude"=>$latitude, ":longitude"=>$longitude,
+    ":image"=>$path, ":id_user"=>$id_user));
     }
 
-    private function subirImagen($imagen){
-        $destino_final = 'images/' . uniqid() . '.jpg';
-        move_uploaded_file($imagen, $destino_final);
-        return $destino_final;
+    private function uploadImage($image){
+        $final_position = 'images/' . uniqid() . '.jpg';
+        move_uploaded_file($image, $final_position);
+        return $final_position;
     }
 
 
