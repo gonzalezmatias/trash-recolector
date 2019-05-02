@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `reportes` (
   `id_reporte` int(11) NOT NULL,
   `detalle` varchar(255) DEFAULT NULL,
-  `latitud` int(11) NOT NULL,
-  `longitud` int(11) NOT NULL,
+  `latitud` int(255) NOT NULL,
+  `longitud` int(255) NOT NULL,
   `imagen` varchar(256) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id_usuario` int(11) NOT NULL DEFAULT '9999'

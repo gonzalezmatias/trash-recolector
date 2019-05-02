@@ -23,7 +23,8 @@ class FormController
     $detalle=$_POST['details'];
     $rutaTempimagen=$_FILES['imagenes']['name'];
     $id_usuario=99999;
-    $this->model->createAComplaint($detalle,$latitud,$longitud,$rutaTempimagen,$id_usuario);
+    $this->model->createAComplaint($detalle,$latitud,$longitud,$rutaTempimagen[0],$id_usuario);
+    $this->home();
 
 
 
@@ -31,15 +32,15 @@ class FormController
 
     }
 
-    
+
 
     function sonJPG($ruta){
-      
+
                     $tamaño = strlen($ruta)-3;
                     $ext = substr($ruta, $tamaño);
            return     (($ext == "jpg") || ($ext == "png"));
-        
-        
+
+
       }
 }
 
