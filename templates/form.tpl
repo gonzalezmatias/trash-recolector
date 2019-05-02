@@ -4,14 +4,9 @@
     <h2>Denuncia</h2>
     <form method="post" action="agregarDenuncia"  enctype="multipart/form-data">
          <div class="form-group">
-<<<<<<< HEAD
             <label for="imagen">Foto del incidente</label></br>
             <input type="file" id="imagenes" name="imagenes[]">
-=======
-            <label for="imagen">Foto del incidente</label>
-            <input type="file" id="imagenes" name="imagenes[]" multiple>
->>>>>>> master
-        </div>
+
       
 
       <button type="button" id="location"> Dar mi ubicación </button> </br>
@@ -24,9 +19,6 @@
         <div class="form-group">
         <label for="#">Detalles de la denuncia (opcional)</label>
       </div>
-<<<<<<< HEAD
-      <textarea name="details" rows="4" cols="50"></textarea></br>
-=======
       <!-- <label hidden id="location"></label> -->
       <button type="button" id="location"> Dar mi ubicación </button> 
       <div class="container descr">
