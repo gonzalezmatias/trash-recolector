@@ -18,8 +18,8 @@ class FormController
     }
 
     public function agregarDenuncia(){
-     $latitud=$_POST['latitud'];
-    $longitud=$_POST['longitud'];
+     $latitud=$_POST['latitude'];
+    $longitud=$_POST['longitude'];
     $detalle=$_POST['details'];
     $rutaTempimagen=$_FILES['imagenes']['name'];
     $id_usuario=99999;
@@ -37,7 +37,7 @@ class FormController
       
                     $tamaño = strlen($ruta)-3;
                     $ext = substr($ruta, $tamaño);
-           return     (($ext == "jpg") || ($ext == "png"))
+           return     (($ext == "jpg") || ($ext == "png"));
         
         
       }

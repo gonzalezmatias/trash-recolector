@@ -20,11 +20,9 @@
         <label for="#">Detalles de la denuncia (opcional)</label>
       </div>
       <!-- <label hidden id="location"></label> -->
-      <button type="button" id="location"> Dar mi ubicación </button> 
-      <div class="container descr">
        <textarea class="description" name="details" rows="4" cols="50"></textarea>
       </div>
->>>>>>> master
+
       <button type="submit" class="btn btn-primary">Enviar Denuncia</button>
     </form>
   </div>
