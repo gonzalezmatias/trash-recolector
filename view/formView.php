@@ -2,9 +2,7 @@
 <?php
 require('libs/Smarty.class.php');
 
-/**
- *
- */
+// Cuando el controller lo solicita, muestra el template requerido. 
 class FormView
 {
 

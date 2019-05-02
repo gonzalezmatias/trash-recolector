@@ -22,7 +22,6 @@ private $db;
 
     private function subirImagen($imagen){
         $destino_final = 'images/' . uniqid() . '.jpg';
-        //echo "destino_final: ".$destino_final;
         move_uploaded_file($imagen, $destino_final);
         return $destino_final;
     }
