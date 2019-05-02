@@ -1,6 +1,6 @@
 'use strict'
   let button = document.getElementById("location");
-  document.addEventListener('click', getLocation);
+  button.addEventListener('click', getLocation);
 
   function getLocation() { //Función que obtiene las coordenadas actuales de la persona que presiona el botón
     if (navigator.geolocation) {
