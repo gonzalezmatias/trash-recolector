@@ -5,13 +5,13 @@
     <form method="post" action="agregarDenuncia"  enctype="multipart/form-data">
          <div class="form-group">
             <label for="imagen">Foto del incidente</label></br>
-            <input type="file" id="imagenes" name="imagenes[]">
+            <input class="btn btn-primary" type="file" id="imagenes" name="imagenes[]">
             <br>
             <br>
 
 
 
-      <button type="button" id="location"> Dar mi ubicación </button>
+      <button type="button" class="btn btn-danger" id="location"> Dar mi ubicación </button>
     </br>
        <div class="position">
           <input hidden type="text" name="latitude" id="latitude" value="">
