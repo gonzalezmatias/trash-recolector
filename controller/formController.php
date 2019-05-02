@@ -1,13 +1,13 @@
 <?php
 require_once  "./view/FormView.php";
-//require_once  "./model/FormModel.php";
+require_once  "./model/FormModel.php";
 class FormController
 {
    // private $model;
     private $titulo;
     private $view;
     function __construct(){
-       // $model= new FormModel();
+        $this->model= new FormModel();
         $this->titulo = "Formulario Principal";
         $this->view = new FormView();
     }
@@ -18,9 +18,14 @@ class FormController
     }
 
     public function agregarDenuncia(){
-     $latitud, $longitud;
-      $detalle=$_POST['details'];
-      $rutaTempimagen=$_FILES['imagenes']['name'];
+     $latitud=$_POST['latitud'];
+    $longitud=$_POST['longitud'];
+    $detalle=$_POST['details'];
+    $rutaTempimagen=$_FILES['imagenes']['name'];
+    $id_usuario=99999;
+    $this->model->createAComplaint($detalle,$latitud,$longitud,$rutaTempimagen,$id_usuario);
+
+
 
 
 

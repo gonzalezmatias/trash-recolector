@@ -11,9 +11,7 @@
   }
 
   function showPosition(position) {
-    console.log("Latitude: " + position.coords.latitude);
-    console.log("Longitude: " + position.coords.longitude)
-    // Acá hay que poner donde queremos mandar las coordenadas
-    // x.innerHTML = "Latitude: " + position.coords.latitude +
-    // "<br>Longitude: " + position.coords.longitude;
+    document.getElementById("latitude").value = position.coords.latitude;
+    document.getElementById("longitude").value = position.coords.longitude;
+    document.getElementById("message").innerHTML = "<p> Sus coordenadas fueron capturadas </p>";
   }
