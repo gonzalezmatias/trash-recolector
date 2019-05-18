@@ -10,7 +10,13 @@
             <br>
 
 
-
+            <div class="container-fluid">
+              <div id="map" class="map">
+          </div>
+          </div>
+          <br>
+          <br>
+          
       <button type="button" class="btn btn-danger" id="location"> Dar mi ubicación </button>
     </br>
        <div class="position">
@@ -28,6 +34,6 @@
 
       <button type="submit" class="btn btn-primary">Enviar Denuncia</button>
     </form>
-  </div>
+
 </div>
 {include file= "footer.tpl"}
