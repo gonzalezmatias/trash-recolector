@@ -61,3 +61,44 @@
   width: 350px;
   height: 300px;
 }
+
+a.nounderline:link
+{
+text-decoration:none;
+}
+
+.reports{
+   width: 100%;
+   height: 100%;
+   display: block;
+   text-align: center;
+   padding: 1%;
+   background-image: linear-gradient(to bottom right, green, aqua);
+}
+
+
+.reportBTN{
+   background-color: rgb(228, 236, 228);
+  border: none;
+  color: rgb(22, 21, 21);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.reportBTN:hover {
+   background-color: #555555;
+   color: white;
+}
+
+.reportsContainer{
+   width: 100%;
+   margin-left: 1%;
+   height: 100%;
+}

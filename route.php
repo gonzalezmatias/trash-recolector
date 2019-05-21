@@ -1,9 +1,9 @@
 <?php
 
-//El route se encarga de redireccionar al controller correspondiente a lo que se quiera hacer (por ahora solo está)
-//implementada la redirección al form
+//El route se encarga de redireccionar al controller correspondiente a lo que se quiera hacer 
 require_once "config/ConfigApp.php";
 require_once "controller/FormController.php";
+require_once "controller/AdminController.php";
 
 
 

@@ -1,6 +1,8 @@
 <?php
 
-define('HOME', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
+define('LOCATION', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
+define('HOME', LOCATION);
+define('ADMIN', LOCATION . '/admin');
 
 //define('PROD', 'Location: http://'.$_SERVER["SERVER_NAME"]. ":". $_SERVER['SERVER_PORT'] . dirname($_SERVER["PHP_SELF"]).'/productos');
 
@@ -14,7 +16,8 @@ class ConfigApp
       'home'=>'formController#home',
       'agregarDenuncia'=>'FormController#addComplaint',
       'verDenuncia'=>'FormController#successfulComplaint',
-
+      'recorrido'=>'AdminController#map',
+      'reportsList'=>'AdminController#report',
 
 
 
