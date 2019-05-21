@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-05-2019 a las 20:31:05
--- Versión del servidor: 10.1.21-MariaDB
--- Versión de PHP: 5.6.30
+-- Tiempo de generación: 21-05-2019 a las 05:42:18
+-- Versión del servidor: 10.1.36-MariaDB
+-- Versión de PHP: 7.0.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -33,7 +35,8 @@ CREATE TABLE `reportes` (
   `longitud` float NOT NULL,
   `imagen` varchar(256) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `id_usuario` int(11) NOT NULL DEFAULT '9999'
+  `id_usuario` int(11) NOT NULL DEFAULT '9999',
+  `status` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -54,7 +57,9 @@ ALTER TABLE `reportes`
 -- AUTO_INCREMENT de la tabla `reportes`
 --
 ALTER TABLE `reportes`
-  MODIFY `id_reporte` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_reporte` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

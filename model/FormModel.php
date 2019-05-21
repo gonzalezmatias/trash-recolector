@@ -25,6 +25,11 @@ private $db;
         return $final_position;
     }
 
+    function changeStatus($id_reporte){
+      $sentence = $this->db->prepare("UPDATE reportes WHERE id_reporte = ? set status = ?");
+      $sentence->execute(array($id_reporte, TRUE));
+    }
+
 
 
 
