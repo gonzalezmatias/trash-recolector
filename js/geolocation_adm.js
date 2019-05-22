@@ -1,24 +1,38 @@
-$("#mapeoButton").click(function() {
-var $row = $(this).closest("tr");    // Find the row
- latitud = $row.find(".latitud").text(); // Find the text
- longitud = $row.find(".longitud").text();
- console.log(latitud,longitud);
-//addInfoBubble(map);
 
-// Let's test it out
+var latitud;
+var longitud;
+var ret=[];
+$( document ).ready(function() {
+
+
+$("#reportBTN").on('click', function (e) {
+    ret.push("a");
+    e.preventDefault();
+     var data = $("#table tr.comp_data").map(function (index, elem) {
+        $('.inputValue', this).each(function () {
+            var d = $(this).val()||$(this).text();
+            ret.push(d);
+        });
+        return ret;
+    });
 });
 
+$("#reportBTN").on('click', function (e) {
+  e.preventDefault();
+  imprimir();
+});
 
-
-
-$( document ).ready(function() {
-    let latitud;
-    let longitud;
-
-
-
-
-
+function imprimir(){
+  for (var i = 0; i < ret.length; i++) {
+    if (i%2) {
+      console.log(ret[i])
+      console.log(ret[i+1]);
+      latitud=ret[i];
+      longitud=ret[i+1];
+      addInfoBubble(map);
+    }
+  }
+}
 /**
  * Crea un nuevo marker y lo agrega al grupo
     group: donde se guarda
@@ -53,7 +67,7 @@ function addInfoBubble(map) {
 //  muestra la info
     ui.addBubble(bubble);
     }, false);
-    addMarkerToGroup(group, {latitud,longitud});
+    addMarkerToGroup(group, {lat: latitud, lng: longitud});
 
 }
 
@@ -83,7 +97,4 @@ let map = new H.Map(document.getElementById('map2'),
 let behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
 // crea la interfaz del usuario(ui)
 let ui = H.ui.UI.createDefault(map, defaultLayers);
-
-// llama a la funcion para usar el mapa
-addInfoBubble(map);
 });
