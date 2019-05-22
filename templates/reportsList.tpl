@@ -1,5 +1,5 @@
-<div class="reports">
-    <h1>lista de reportes</h1>
+<div class="">
+    <h2>Lista de reportes</h2>
     <table class="table" id="table">
   <thead>
     <tr>

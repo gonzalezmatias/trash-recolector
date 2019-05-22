@@ -103,3 +103,13 @@ text-decoration:none;
    height: 100%;
    padding: 10px;
 }
+h2{
+
+  font-family:Times New Roman;
+     font-weight: bold;
+}
+
+th{
+  font-size: 12px;
+
+}
