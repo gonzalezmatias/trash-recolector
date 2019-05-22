@@ -15,8 +15,9 @@ class AdminModel{
 
   }
 
+
   function fetchAllReports(){
-    $sentencia = $this->db->prepare("SELECT * FROM reportes");
+    $sentencia = $this->db->prepare("select * from reportes");
     $sentencia->execute(array());
     $reports = $sentencia->fetchAll(PDO::FETCH_ASSOC);
     return $reports;

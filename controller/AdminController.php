@@ -16,12 +16,16 @@ class AdminController
   }
 
   public function map(){ //llama a la vista y le pide que muestre el template del recorrido
-    $this->view->showMap($this->title);
+    $reports = $this->model->fetchAllReports();
+    $this->view->showMap($this->title,$reports);
   }
 
   public function report(){ //llama a la vista y le pide que muestre el template con la lista de reportes
-  
+
     $reports = $this->model->fetchAllReports();
+    // foreach($reports as $result) {
+    //   echo $result['latitud'],$result['longitud'], '<br>';
+    //     }
     $this->view->showReports($this->title,$reports);
   }
 

@@ -1,3 +1,23 @@
+$("#mapeoButton").click(function() {
+var $row = $(this).closest("tr");    // Find the row
+ latitud = $row.find(".latitud").text(); // Find the text
+ longitud = $row.find(".longitud").text();
+ console.log(latitud,longitud);
+//addInfoBubble(map);
+
+// Let's test it out
+});
+
+
+
+
+$( document ).ready(function() {
+    let latitud;
+    let longitud;
+
+
+
+
 
 /**
  * Crea un nuevo marker y lo agrega al grupo
@@ -33,11 +53,8 @@ function addInfoBubble(map) {
 //  muestra la info
     ui.addBubble(bubble);
     }, false);
-    addMarkerToGroup(group, {lat:-37.318796, lng:-59.138583});
+    addMarkerToGroup(group, {latitud,longitud});
 
-    addMarkerToGroup(group, {lat:-37.325354, lng: -59.136346});
-
-    addMarkerToGroup(group, {lat: -37.325986, lng: -59.147128});
 }
 
 /**
@@ -45,8 +62,8 @@ function addInfoBubble(map) {
  */
 
 let platform = new H.service.Platform({
-    app_id: 'devportal-demo-20180625',
-    app_code: '9v2BkviRwi9Ot26kp2IysQ',
+  app_id: 'MvGqR0bYKR3wnub7LJqq',
+  app_code: 'p1NVa-vWj167lruV3HesDQ',
     useHTTPS: true
 });
 let pixelRatio = window.devicePixelRatio || 1;
@@ -55,7 +72,7 @@ let defaultLayers = platform.createDefaultLayers({
     ppi: pixelRatio === 1 ? undefined : 320
 });
 // ininicia el mapa en Tandil
-let map = new H.Map(document.getElementById('map'),
+let map = new H.Map(document.getElementById('map2'),
     defaultLayers.normal.map,{
     center: {lat: -37.32167, lng: -59.13316},
     zoom: 14,
@@ -69,3 +86,4 @@ let ui = H.ui.UI.createDefault(map, defaultLayers);
 
 // llama a la funcion para usar el mapa
 addInfoBubble(map);
+});

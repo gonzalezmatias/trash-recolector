@@ -73,7 +73,7 @@ text-decoration:none;
    display: block;
    text-align: center;
    padding: 1%;
-   background-image: linear-gradient(to bottom right, green, aqua);
+   background-image: linear-gradient(to bottom right, green, aqua); */
 }
 
 
@@ -101,4 +101,5 @@ text-decoration:none;
    width: 100%;
    margin-left: 1%;
    height: 100%;
+   padding: 10px;
 }

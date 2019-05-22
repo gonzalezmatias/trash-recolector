@@ -12,11 +12,12 @@
 
             <div class="container-fluid">
               <div id="map" class="map">
+              </div>
           </div>
-          </div>
+
           <br>
           <br>
-          
+
       <button type="button" class="btn btn-danger" id="location"> Dar mi ubicación </button>
     </br>
        <div class="position">
