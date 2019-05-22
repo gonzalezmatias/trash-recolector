@@ -6,7 +6,6 @@
   button.addEventListener('click', getLocation);
 
 
-
   function getLocation() { //Función que obtiene las coordenadas actuales de la persona que presiona el botón
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
@@ -61,8 +60,8 @@ function addInfoBubble(map) {
  */
 
 let platform = new H.service.Platform({
-    app_id: 'devportal-demo-20180625',
-    app_code: '9v2BkviRwi9Ot26kp2IysQ',
+    app_id: 'MvGqR0bYKR3wnub7LJqq',
+    app_code: 'p1NVa-vWj167lruV3HesDQ',
     useHTTPS: true
 });
 let pixelRatio = window.devicePixelRatio || 1;

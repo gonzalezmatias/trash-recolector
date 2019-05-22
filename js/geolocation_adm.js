@@ -1,4 +1,38 @@
 
+var latitud;
+var longitud;
+var ret=[];
+$( document ).ready(function() {
+
+
+$("#reportBTN").on('click', function (e) {
+    ret.push("a");
+    e.preventDefault();
+     var data = $("#table tr.comp_data").map(function (index, elem) {
+        $('.inputValue', this).each(function () {
+            var d = $(this).val()||$(this).text();
+            ret.push(d);
+        });
+        return ret;
+    });
+});
+
+$("#reportBTN").on('click', function (e) {
+  e.preventDefault();
+  imprimir();
+});
+
+function imprimir(){
+  for (var i = 0; i < ret.length; i++) {
+    if (i%2) {
+      console.log(ret[i])
+      console.log(ret[i+1]);
+      latitud=ret[i];
+      longitud=ret[i+1];
+      addInfoBubble(map);
+    }
+  }
+}
 /**
  * Crea un nuevo marker y lo agrega al grupo
     group: donde se guarda
@@ -33,11 +67,8 @@ function addInfoBubble(map) {
 //  muestra la info
     ui.addBubble(bubble);
     }, false);
-    addMarkerToGroup(group, {lat:-37.318796, lng:-59.138583});
+    addMarkerToGroup(group, {lat: latitud, lng: longitud});
 
-    addMarkerToGroup(group, {lat:-37.325354, lng: -59.136346});
-
-    addMarkerToGroup(group, {lat: -37.325986, lng: -59.147128});
 }
 
 /**
@@ -45,8 +76,8 @@ function addInfoBubble(map) {
  */
 
 let platform = new H.service.Platform({
-    app_id: 'devportal-demo-20180625',
-    app_code: '9v2BkviRwi9Ot26kp2IysQ',
+  app_id: 'MvGqR0bYKR3wnub7LJqq',
+  app_code: 'p1NVa-vWj167lruV3HesDQ',
     useHTTPS: true
 });
 let pixelRatio = window.devicePixelRatio || 1;
@@ -55,7 +86,7 @@ let defaultLayers = platform.createDefaultLayers({
     ppi: pixelRatio === 1 ? undefined : 320
 });
 // ininicia el mapa en Tandil
-let map = new H.Map(document.getElementById('map'),
+let map = new H.Map(document.getElementById('map2'),
     defaultLayers.normal.map,{
     center: {lat: -37.32167, lng: -59.13316},
     zoom: 14,
@@ -66,6 +97,4 @@ let map = new H.Map(document.getElementById('map'),
 let behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
 // crea la interfaz del usuario(ui)
 let ui = H.ui.UI.createDefault(map, defaultLayers);
-
-// llama a la funcion para usar el mapa
-addInfoBubble(map);
+});
