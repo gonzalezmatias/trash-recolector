@@ -23,6 +23,12 @@ class AdminModel{
     return $reports;
   }
 
+  //cambia el estado de la denuncia
+    function changeStatus($id_reporte){
+      $sentence = $this->db->prepare("update reportes set status=? where id_reporte=?");
+      $sentence->execute(array(1,$id_reporte));
+    }
+
 }
 
  ?>

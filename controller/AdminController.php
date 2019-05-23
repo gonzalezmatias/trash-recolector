@@ -29,6 +29,15 @@ class AdminController
     $this->view->showReports($this->title,$reports);
   }
 
+  public function editarEstado(){
+    if (isset($_REQUEST['id'])){
+      $edit = $_REQUEST['id'];
+      $this->model->changeStatus($edit);
+    }
+    $this->map();
+
+  }
+
 }
 
 ?>

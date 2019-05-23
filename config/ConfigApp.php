@@ -18,6 +18,7 @@ class ConfigApp
       'verDenuncia'=>'FormController#successfulComplaint',
       'recorrido'=>'AdminController#map',
       'reportsList'=>'AdminController#report',
+      'editarEstado'=>'AdminController#editarEstado',
 
 
 

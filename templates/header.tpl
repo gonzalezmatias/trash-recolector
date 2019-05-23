@@ -41,6 +41,3 @@
   </div>
 </header>
 <div class="reports">
-
-
-<!-- https://bootsnipp.com/snippets/eNbOa -->

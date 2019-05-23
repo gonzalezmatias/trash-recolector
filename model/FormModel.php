@@ -25,11 +25,7 @@ class FormModel{
     return $final_position;
   }
 
-//cambia el estado de la denuncia 
-  function changeStatus($id_reporte){
-    $sentence = $this->db->prepare("UPDATE reportes WHERE id_reporte = ? set status = ?");
-    $sentence->execute(array($id_reporte, TRUE));
-  }
+
 
 
 }
