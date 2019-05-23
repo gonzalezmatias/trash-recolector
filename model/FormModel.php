@@ -1,7 +1,7 @@
 <?php
 class FormModel{
 
-private $db;
+  private $db;
 
   function __construct(){
     $this->db = new PDO('mysql:host=localhost;dbname=trash_recolector; charset=utf8', 'root', '');
@@ -17,17 +17,21 @@ private $db;
 
     $insert->execute(array(":details"=>$details, ":latitude"=>$latitude, ":longitude"=>$longitude,
     ":image"=>$path, ":id_user"=>$id_user));
-    }
+  }
 
-    private function uploadImage($image){
-        $final_position = 'images/' . uniqid() . '.jpg';
-        move_uploaded_file($image, $final_position);
-        return $final_position;
-    }
+  private function uploadImage($image){
+    $final_position = 'images/' . uniqid() . '.jpg';
+    move_uploaded_file($image, $final_position);
+    return $final_position;
+  }
 
-
+//cambia el estado de la denuncia 
+  function changeStatus($id_reporte){
+    $sentence = $this->db->prepare("UPDATE reportes WHERE id_reporte = ? set status = ?");
+    $sentence->execute(array($id_reporte, TRUE));
+  }
 
 
 }
 
- ?>
+?>
