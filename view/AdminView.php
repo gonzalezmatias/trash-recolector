@@ -14,9 +14,10 @@ class AdminView
 
   }
 
-  function showMap($title,$reports){ //La activación de la función pone en pantalla el template solicitado
+  function showMap($title,$reports,$user){ //La activación de la función pone en pantalla el template solicitado
     $this->Smarty->assign('title',$title);
     $this->Smarty->assign('reports',$reports);
+    $this->Smarty->assign('user',$user);
     $this->Smarty->display('templates/recorrido.tpl');
   }
 

@@ -1,4 +1,3 @@
-{include file="header.tpl"}
 <div class="reportForm">
   <div class="container">
     <h2>Denuncia</h2>
@@ -36,4 +35,3 @@
     </form>
 
 </div>
-{include file= "footer.tpl"}
