@@ -31,6 +31,8 @@
             <li class="active"><a href="home">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
+            <li><a href="logout">Logout</a></li>
+            <li><a> Logueado como: {$user}</a></li>
           </ul>
         </div>
         <!--/.nav-collapse -->

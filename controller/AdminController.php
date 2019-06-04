@@ -9,24 +9,27 @@ class AdminController
   private $title;
   private $view;
   private $model;
+  private $loginController;
   function __construct(){
     $this->model= new AdminModel();
     $this->title = "mapa de recorridos";
+    $this->loginController = new LoginController();
     $this->view = new AdminView();
   }
 
   public function map(){ //llama a la vista y le pide que muestre el template del recorrido
     $reports = $this->model->fetchAllReports();
-    $this->view->showMap($this->title,$reports);
+    $user= $this->loginController->getUser();
+    $this->view->showMap($this->title,$reports,$user);
   }
 
   public function report(){ //llama a la vista y le pide que muestre el template con la lista de reportes
 
     $reports = $this->model->fetchAllReports();
+    $this->view->showReports($this->title,$reports);
     // foreach($reports as $result) {
     //   echo $result['latitud'],$result['longitud'], '<br>';
     //     }
-    $this->view->showReports($this->title,$reports);
   }
 
   public function editarEstado(){

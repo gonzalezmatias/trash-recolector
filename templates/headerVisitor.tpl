@@ -31,6 +31,7 @@
             <li class="active"><a href="home">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
+            <li><a href="registrarse">Registrarse</a></li>
           </ul>
         </div>
         <!--/.nav-collapse -->
