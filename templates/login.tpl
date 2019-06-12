@@ -10,7 +10,7 @@
           <label>Password</label>
           <input type="password" class="form-control" id="passwordId" name="passwordId">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Entrar</button>
       </form>
     </div>
   </div>
