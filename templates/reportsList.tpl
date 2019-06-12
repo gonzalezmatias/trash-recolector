@@ -3,9 +3,13 @@
   {if $user==admin}
     <h2>Lista de reportes</h2>
     {else}
-    <h2>Listado de sus denuncias pendientes</h2>
+      {if $reports}
+        <h2>Listado de sus denuncias pendientes</h2>
+      {/if}
     {/if}
+    {if $reports}
     <table class="table" id="table">
+
   <thead>
     <tr>
       <th scope="col" class="col-md-1 col-xs-1">Reporte</th>
@@ -41,4 +45,5 @@
     {/foreach}
   </tbody>
 </table>
+{/if}
 </div>
