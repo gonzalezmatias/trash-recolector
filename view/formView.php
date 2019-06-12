@@ -22,13 +22,13 @@ class FormView
     $this->Smarty->display('templates/userHome.tpl');
   }
   function showAdminPage($title, $user){
-    $this->Smarty->assign('titulo', $title);
+    $this->Smarty->assign('title', $title);
     $this->Smarty->assign('user', $user);
     $this->Smarty->assign('index', "http://".$_SERVER["SERVER_NAME"].dirname($_SERVER["PHP_SELF"]));
     $this->Smarty->display('templates/adminHome.tpl');
   }
   function showVisitorPage($title){
-    $this->Smarty->assign('titulo', $title);
+    $this->Smarty->assign('title', $title);
     $this->Smarty->assign('index', "http://".$_SERVER["SERVER_NAME"].dirname($_SERVER["PHP_SELF"]));
     $this->Smarty->display('templates/visitorHome.tpl');
   }

@@ -7,13 +7,13 @@ class LoginView
   }
 
   function showLogin($titulo, $mensaje=""){
-    $this->Smarty->assign('titulo', $titulo);
+    $this->Smarty->assign('title', $titulo);
     $this->Smarty->assign('mensaje', $mensaje);
     $this->Smarty->assign('index', "http://".$_SERVER["SERVER_NAME"].dirname($_SERVER["PHP_SELF"]));
     $this->Smarty->display('templates/visitorHome.tpl');
   }
   function showRegistrationForm($titulo, $mensaje=""){
-    $this->Smarty->assign('titulo', $titulo);
+    $this->Smarty->assign('title', $titulo);
     $this->Smarty->assign('mensaje', $mensaje);
     $this->Smarty->assign('index', "http://".$_SERVER["SERVER_NAME"].dirname($_SERVER["PHP_SELF"]));
     $this->Smarty->display('templates/registrationForm.tpl');

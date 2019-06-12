@@ -22,17 +22,5 @@ class LoginModel
     $sentencia = $this->db->prepare("insert into usuario(user, pass)values(?,?)");
     $sentencia->execute(array($user,$pass));
   }
-  // function darPermisos($user){
-  //   $sentencia = $this->db->prepare( "update usuario set admin = 1 where user= ?");
-  //   $sentencia->execute(array($user[0]));
-  // }
-  // function quitarPermisos($user){
-  //   $sentencia = $this->db->prepare( "update usuario set admin = 0 where user= ?");
-  //   $sentencia->execute(array($user[0]));
-  // }
-  // function eliminarUsuario($user){
-  //   $sentencia = $this->db->prepare( "delete from usuario where user= ?");
-  //   $sentencia->execute(array($user[0]));
-  // }
 }
 ?>
