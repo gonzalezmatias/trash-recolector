@@ -28,9 +28,16 @@
         </div>
         <div id="navbar4" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
+            {if $user!=admin}
             <li class="active"><a href="home">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
+            {/if}
+            <!-- {if $user==admin} -->
+            <!-- <li><a href="recorrido">Map</a></li> -->
+            <!-- {/if} -->
+            <li><a href="logout">Logout</a></li>
+            <li class="userName"><a> Logueado como: {$user}</a></li>
           </ul>
         </div>
         <!--/.nav-collapse -->

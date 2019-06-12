@@ -1,4 +1,4 @@
-{include file="headerAdmin.tpl"}
+{include file="header.tpl"}
 <div class=''>
   <h2>Mapa de la ciudad</h2>
     <div class="reportsContainer" class="col-md-6 col-md-offset-2" >

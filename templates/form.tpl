@@ -1,3 +1,4 @@
+{include file="header.tpl"}
 <div class="reportForm">
   <div class="container">
     <h2>Denuncia</h2>
@@ -35,3 +36,5 @@
     </form>
 
 </div>
+{include file="reportsList.tpl"}
+{include file="footer.tpl"}

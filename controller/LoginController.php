@@ -79,7 +79,7 @@ class LoginController
   }
 
   function getUserID(){
-    session_start();
+    // session_start();
     $user = $_SESSION["user"];
     $id = $this->model->getUser($user);
     return $id["id_usuario"];
