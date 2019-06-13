@@ -56,7 +56,7 @@ class LoginController
         $_SESSION["user"]=$user;
         header(HOME);
       }else{
-        $this->view->showLogin($this->title, "Contraseña incorrecta");
+        $this->view->showLogin($this->title, "Usuario y/o Contraseña incorrecta");
       }
     } else {
       //var_dump("else2");
