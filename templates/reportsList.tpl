@@ -4,7 +4,7 @@
     <h2>Lista de reportes</h2>
     {else}
       {if $reports}
-        <h2>Listado de sus denuncias pendientes</h2>
+        <h2>Sus denuncias pendientes</h2>
       {/if}
     {/if}
     {if $reports}

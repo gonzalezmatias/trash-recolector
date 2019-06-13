@@ -19,8 +19,6 @@
     document.getElementById("longitude").value = position.coords.longitude;
     lati= position.coords.latitude;
     long=position.coords.longitude;
-    // console.log(lati);
-    // console.log(long);
     addInfoBubble(map)
     document.getElementById("message").innerHTML = "<p> Sus coordenadas fueron capturadas </p>";
   }

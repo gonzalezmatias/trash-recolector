@@ -33,11 +33,7 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
             {/if}
-            <!-- {if $user==admin} -->
-            <!-- <li><a href="recorrido">Map</a></li> -->
-            <!-- {/if} -->
             <li><a href="logout">Logout</a></li>
-            <li class="userName"><a> Logueado como: {$user}</a></li>
           </ul>
         </div>
         <!--/.nav-collapse -->

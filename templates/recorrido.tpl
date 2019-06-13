@@ -8,9 +8,8 @@
       </div>
     </div>
 
-
+    <br>
     <div class="options reportsContainer">
-        <!-- <button class="reportBTN"><a class="nounderline" href="reportsList">ver reportes</a></button> -->
         <button class="reportBTN" id="reportBTN">Mapear Coordenadas</button>
     </div>
     {include file="reportsList.tpl"}
