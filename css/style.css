@@ -28,24 +28,24 @@
  .main-logo{
     position: absolute;
     width: 11%;
-    top: 5px;
-    left: 4%;
+    top: 4px;
+    left: 3%;
  }
  .navbar-header{
     background-color: darkslategrey;
  }
 
  .container-fluid{
-    padding-right: 0;
-    padding-left: 0px;
+    padding-right: 0px;
+    padding-left: 8px;
     margin-right: auto;
     margin-left: auto;
  }
  .container{
-    padding-right: 0;
+    padding-right: 0px;
     padding-left: 0px;
     margin-right: auto;
-    margin-left: 10px;
+    margin-left: 0px;
  }
 
  .navbar-toggle{
@@ -60,8 +60,11 @@
 .map{
   width: 350px;
   height: 300px;
-}
 
+}
+.map, .description, .reportBTN{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 2.89);
+}
 a.nounderline:link
 {
 text-decoration:none;
@@ -99,9 +102,9 @@ text-decoration:none;
 
 .reportsContainer{
    width: 100%;
-   margin-left: 1%;
+   /* margin-left: 1%; */
    height: 100%;
-   padding: 10px;
+   /* padding: 10px; */
 }
 h2{
 
@@ -112,4 +115,13 @@ h2{
 th{
   font-size: 12px;
 
+}
+.userName{
+  font-weight: bold;
+}
+.navbar{
+  margin-bottom:0px;
+}
+.imgLabel{
+  float: left;
 }

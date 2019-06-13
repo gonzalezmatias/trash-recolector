@@ -15,17 +15,19 @@ class FormView
 
 
   }
-  function showUserPage($title, $user){
+  function showUserPage($title, $user, $userComplaints){
     $this->Smarty->assign('titulo', $title);
     $this->Smarty->assign('user', $user);
+    $this->Smarty->assign('reports', $userComplaints);
     $this->Smarty->assign('index', "http://".$_SERVER["SERVER_NAME"].dirname($_SERVER["PHP_SELF"]));
-    $this->Smarty->display('templates/userHome.tpl');
+    $this->Smarty->display('templates/form.tpl');
   }
-  function showAdminPage($title, $user){
+  function showAdminPage($title, $user, $reports){
     $this->Smarty->assign('title', $title);
     $this->Smarty->assign('user', $user);
+    $this->Smarty->assign('reports',$reports);
     $this->Smarty->assign('index', "http://".$_SERVER["SERVER_NAME"].dirname($_SERVER["PHP_SELF"]));
-    $this->Smarty->display('templates/adminHome.tpl');
+    $this->Smarty->display('templates/recorrido.tpl');
   }
   function showVisitorPage($title){
     $this->Smarty->assign('title', $title);
@@ -38,7 +40,8 @@ class FormView
     $this->Smarty->assign('index', "http://".$_SERVER["SERVER_NAME"].dirname($_SERVER["PHP_SELF"]));
     $this->Smarty->display('templates/form.tpl');
   }
-  function successfulComplaint($title){
+  function successfulComplaint($title,$user){
+    $this->Smarty->assign('user', $user);
     $this->Smarty->assign('title',$title);
     $this->Smarty->display('templates/successfulComplaint.tpl');
   }

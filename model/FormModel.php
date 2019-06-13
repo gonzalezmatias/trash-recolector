@@ -23,6 +23,12 @@ class FormModel{
     return $final_position;
   }
 
+   function getUserComplaint($user_id){
+    $sentencia = $this->db->prepare("select * from reportes where id_usuario=?");
+    $sentencia->execute(array($user_id));
+    $reports = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+    return $reports;
+  }
 
 
 

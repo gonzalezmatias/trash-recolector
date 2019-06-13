@@ -1,13 +1,16 @@
+{include file="header.tpl"}
 <div class="reportForm">
   <div class="container">
     <h2>Denuncia</h2>
     <br>
     <form method="post" action="agregarDenuncia"  enctype="multipart/form-data">
          <div class="form-group">
-            <label for="imagen">Foto del incidente</label>
-            <input class="btn btn-primary" type="file" id="imagenes" name="imagenes[]"  required/>
-            <br>
+           <div class="col-xs-offset-1">
+             <label class="imgLabel"for="imagen">Foto del incidente</label>
+             <input class="btn btn-primary" type="file" id="imagenes" name="imagenes[]"  required/>
+           </div>
 
+            <br>
             <div class="container-fluid">
               <div id="map" class="map">
               </div>
@@ -35,3 +38,5 @@
     </form>
 
 </div>
+{include file="reportsList.tpl"}
+{include file="footer.tpl"}

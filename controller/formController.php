@@ -1,6 +1,7 @@
 <?php
 require_once  "./view/FormView.php";
 require_once  "./model/FormModel.php";
+require_once  "./model/AdminModel.php";
 require_once "LoginController.php";
 //El route llama al controller y este se encarga de derivar la tarea solicitada al model o a la vista según corresponda
 class FormController
@@ -10,6 +11,7 @@ class FormController
   private $view;
   function __construct(){
     $this->model= new FormModel();
+    $this->admModel=new AdminModel();
     $this->loginController = new LoginController();
     $this->title = "Control de basura";
     $this->view = new FormView();
@@ -18,16 +20,25 @@ class FormController
   public function home(){
     $value = $this->loginController->isLogged();
     $user = $this->loginController->getUser();
+    $userID = $this->loginController->getUserID();
     if ($value == "admin"){
-      $this->view->showAdminPage($this->title, $user);
+      $reports = $this->admModel->fetchAllReports();
+      $this->view->showAdminPage($this->title, $user, $reports);
     }else if ($value == "user"){
-      $this->view->showUserPage($this->title, $user);
+
+      $userComplaints=$this->model->getUserComplaint($userID);
+      // foreach ($userComplaints as $key => $value) {
+      //   echo ($value['id_reporte']);
+      // }
+      $this->view->showUserPage($this->title, $user, $userComplaints);
     }else{
       $this->view->showVisitorPage($this->title);
     }
   }
   public function successfulComplaint(){
-    $this->view->successfulComplaint("denuncia exitosa");
+    $user = $this->loginController->getUser();
+
+    $this->view->successfulComplaint("denuncia exitosa",$user);
     }
 
 

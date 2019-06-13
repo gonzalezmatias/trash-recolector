@@ -37,7 +37,11 @@ class AdminController
       $edit = $_REQUEST['id'];
       $this->model->changeStatus($edit);
     }
-    $this->map();
+    // $reports = $this->model->fetchAllReports();
+    // $user= $this->loginController->getUser();
+    // echo $user;
+    header(HOME);
+
 
   }
 

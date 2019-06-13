@@ -48,19 +48,18 @@ class LoginController
     if (!empty($_POST['userId']) && !empty($_POST['passwordId'])){
       $user = $_POST["userId"];
       $pass = $_POST["passwordId"];
-      var_dump($pass);
+      //var_dump($pass);
       $dbUser = $this->model->getUser($user);
       if (password_verify($pass, $dbUser["pass"])) {
-        var_dump("entró");
+        //var_dump("entró");
         session_start();
         $_SESSION["user"]=$user;
         header(HOME);
       }else{
-        var_dump("else1");
         $this->view->showLogin($this->title, "Contraseña incorrecta");
       }
     } else {
-      var_dump("else2");
+      //var_dump("else2");
       $this->view->showLogin($this->title, "No existe el usuario");
     }
   }
@@ -79,10 +78,16 @@ class LoginController
   }
 
   function getUserID(){
-    session_start();
+    if(!isset($_SESSION))
+  {
+      session_start();
+  }
+    //session_start();
+  if (isset($_SESSION["user"])){
     $user = $_SESSION["user"];
     $id = $this->model->getUser($user);
     return $id["id_usuario"];
+  }
   }
 
   function getUser(){
