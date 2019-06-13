@@ -30,6 +30,10 @@ class FormView
     $this->Smarty->display('templates/recorrido.tpl');
   }
   function showVisitorPage($title){
+    $user="";
+    $msj="";
+    $this->Smarty->assign('user', $user);
+    $this->Smarty->assign('mensaje', $msj);
     $this->Smarty->assign('title', $title);
     $this->Smarty->assign('index', "http://".$_SERVER["SERVER_NAME"].dirname($_SERVER["PHP_SELF"]));
     $this->Smarty->display('templates/visitorHome.tpl');

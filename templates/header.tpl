@@ -33,7 +33,11 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
             {/if}
+            {if $user!=""}
             <li><a href="logout">Logout</a></li>
+            {else}
+            <li><a href="registrarse">Registrarse</a></li>
+            {/if}
           </ul>
         </div>
         <!--/.nav-collapse -->

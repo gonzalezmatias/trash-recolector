@@ -1,16 +1,15 @@
-{include file="headerVisitor.tpl"}
-<div class="noticias">
+{include file="header.tpl"}
+<br>
   <div class="container-fluid">
     <div class="row">
-      <form method="post" action="{$index}/verificarRegistro">
+      <form class="col-xs-8 col-md-8 col-md-offset-2 col-xs-offset-2" method="post" action="{$index}/verificarRegistro">
         <div class="form-group">
-          <label>Usuario</label>
-          <input type="input" class="form-control" id="userId" name="userId" aria-describedby="userId" value="">
+          <input type="input" class="form-control" id="userId" name="userId" aria-describedby="userId" value="" placeholder="Nombre De Usuario">
         </div>
         <div class="form-group">
-          <label>Password</label>
-          <input type="password" class="form-control" id="passwordId" name="passwordId" value="">
+          <input type="password" class="form-control" id="passwordId" name="passwordId" value="" placeholder="Contraseña">
         </div>
+        <br>
         <button type="submit" class="btn btn-primary">Registrarse</button>
         <div class="">
           {$mensaje}
