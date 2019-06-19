@@ -1,12 +1,12 @@
 {include file="header.tpl"}
 <div class="reportForm">
   <div class="container">
-    <h2>Denuncia</h2>
+    <h2>Reclamo de basura</h2>
     <br>
     <form method="post" action="agregarDenuncia"  enctype="multipart/form-data">
          <div class="form-group">
            <div class="col-xs-offset-1">
-             <label class="imgLabel"for="imagen">Foto del incidente</label>
+             <label class="imgLabel"for="imagen">Inserte foto de su reclamo</label>
              <input class="btn btn-primary" type="file" id="imagenes" name="imagenes[]"  required/>
            </div>
 
@@ -28,7 +28,7 @@
         </div>
         <br>
       <div class="form-group">
-        <label for="#">Detalles de la denuncia (opcional)</label>
+        <label for="#">Detalles del reclamo (opcional)</label>
         <textarea class="description" name="details" rows="4" cols="50"></textarea>
       </div>
 

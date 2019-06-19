@@ -1,4 +1,4 @@
-<div class="">
+<div class="repp">
   <br>
   {if $user==admin}
     <h2>Lista de reportes</h2>
