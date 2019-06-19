@@ -8,7 +8,7 @@
  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
-
+<script type="text/javascript" src="js/validate_form.js"></script>
 <script type="../js/imageUpload.js"></script>
 <script type="text/javascript" src="js/geolocation_user.js"></script>
 
