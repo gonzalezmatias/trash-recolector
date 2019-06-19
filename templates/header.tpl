@@ -30,8 +30,7 @@
           <ul class="nav navbar-nav">
             {if $user!=admin}
             <li class="active"><a href="home">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            {* <li><a href="#">About</a></li> *}
             {/if}
             {if $user!=""}
             <li><a href="logout">Logout</a></li>
