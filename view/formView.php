@@ -16,7 +16,7 @@ class FormView
 
   }
   function showUserPage($title, $user, $userComplaints){
-    $this->Smarty->assign('titulo', $title);
+    $this->Smarty->assign('title', $title);
     $this->Smarty->assign('user', $user);
     $this->Smarty->assign('reports', $userComplaints);
     $this->Smarty->assign('index', "http://".$_SERVER["SERVER_NAME"].dirname($_SERVER["PHP_SELF"]));
